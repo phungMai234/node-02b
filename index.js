@@ -21,19 +21,19 @@ var server = http.createServer(function(req, res)
     {
         res.writeHead(200, {"Content-type" : "text/html"});
       
-        if(req.url == '/hello' && req.method == 'GET')
+        if(req.url === '/hello' && req.method === 'GET')
         {
             methodGet();
         }
-        if(req.url == '/hello' && req.method == 'POST')
+        if(req.url === '/hello' && req.method === 'POST')
         {
             methodPost();
         }
-        if(req.url == '/hello' && req.method == 'PUT')
+        if(req.url === '/hello' && req.method === 'PUT')
         {
             methodPut();
         }
-        if(req.url == '/hello' && req.method == 'DELETE')
+        if(req.url === '/hello' && req.method === 'DELETE')
         {
             methodDelete();
         }
