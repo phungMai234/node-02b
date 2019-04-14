@@ -20,7 +20,7 @@ function methodPut() {
 var server = http.createServer(function(req, res)
     {
         res.writeHead(200, {"Content-type" : "text/html"});
-        let med = req.method;
+      
         if(req.url == '/hello' && req.method == 'GET')
         {
             methodGet();
