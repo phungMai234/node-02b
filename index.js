@@ -20,26 +20,27 @@ function methodPut() {
 var server = http.createServer(function(req, res)
     {
         res.writeHead(200, {"Content-type" : "text/html"});
-      
-        if(req.url === '/hello' && req.method === 'GET')
+        if(req.method == 'GET' && req.url == '/hello')
         {
-            methodGet();
+            res.write('world');
         }
-        if(req.url === '/hello' && req.method === 'POST')
+        if(req.method == 'POST' && req.url == '/hello')
         {
-            methodPost();
+            res.write('world created');
         }
-        if(req.url === '/hello' && req.method === 'PUT')
+        if(req.method == 'PUT' && req.url == '/hello')
         {
-            methodPut();
+            res.write('world updated');
         }
-        if(req.url === '/hello' && req.method === 'DELETE')
+        if(req.method == 'DELETE' && req.url == '/hello')
         {
-            methodDelete();
+            res.write('world deleted');
         }
+
         res.end();
     }
 );
+
 server.listen(port,host, function (err) {
     if(!err)
     {
